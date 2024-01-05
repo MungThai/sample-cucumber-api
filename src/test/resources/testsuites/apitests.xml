@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="suite1" data-provider-thread-count="2">
+    <test name="api1">
+        <classes>
+         	<class name="runners.APITest1"/>
+        </classes>
+    </test>
+    <test name="api2">
+        <classes>
+         	<class name="runners.APITest2"/>
+        </classes>
+    </test>
+    <test name="api3">
+        <classes>
+         	<class name="runners.APITest3"/>
+        </classes>
+    </test>
+</suite>

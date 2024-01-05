@@ -1,0 +1,17 @@
+{
+	"status":{
+		"element":"status",
+		"matcher":"is",
+		"type":"str"
+	},
+	"distance":{
+		"element":"rows.elements.distance.flatten().text",
+		"matcher":"contains",
+		"type":"str"
+	},
+	"duration":{
+		"element":"rows.elements.duration.flatten().text",
+		"matcher":"contains",
+		"type":"str"
+	}
+}
