@@ -24,11 +24,15 @@ pipeline {
 
     // the pipeline section we all know and love: stages! :D
     stages {
-        stage('Requirements') {
+         stage('Clone Git Repository') {
             steps {
-                echo 'Installing requirements...'
+                git (
+                    url: 'https://github.com/username/repository.git',
+                    branch: 'MungThai',
+                    changelog: true,
+                    pool: true
+                )
             }
-        }
         stage('Build') {
             steps {
                 echo 'Building..'
