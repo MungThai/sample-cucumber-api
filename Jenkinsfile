@@ -26,11 +26,20 @@ pipeline {
     stages {
          stage('Clone Git Repository') {
             steps {
-                git (
-                    url: 'https://github.com/username/repository.git',
-                    branch: 'MungThai',
-                    changelog: true,
-                    poll: true
+                checkout scmGit(
+                    branches: [
+                        [
+                            name: '*/MungThai'
+                        ]
+                    ], 
+                    extensions: [], 
+                    userRemoteConfigs: 
+                    [
+                        [
+                            credentialsId: '2f2aa6ed-af1e-4e3d-ae52-5af09ed16023', 
+                            url: 'https://github.com/MungThai/sample-cucumber-api.git'
+                        ]
+                    ]
                 )
             }
          }
