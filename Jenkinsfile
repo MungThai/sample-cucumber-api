@@ -43,15 +43,10 @@ pipeline {
                 )
             }
          }
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
-        }
         stage('Test') {
             steps {
                 echo 'Run Testing..'
-                sh 'gradle cukes -Dcukes.env=devtest -Dcukes.testsuite=apitests --info'
+                sh ('gradle cukes -Dcukes.env=devtest -Dcukes.testsuite=apitests')
             }
         }
         stage('Report') {
