@@ -30,7 +30,7 @@ pipeline {
                     url: 'https://github.com/username/repository.git',
                     branch: 'MungThai',
                     changelog: true,
-                    pool: true
+                    poll: true
                 )
             }
          }
