@@ -1,4 +1,6 @@
-<a href='http://localhost:8080/job/sample-cucumber-api-pipeline/'><img src='http://localhost:8080/buildStatus/icon?job=sample-cucumber-api-pipeline'></a>
+# pipeline-scripts
+[![Build Status](http://localhost:8080/buildStatus/icon?job=sample-cucumber-api-pipeline)](http://localhost:8080/job/sample-cucumber-api-pipeline/)
+
 ## Sample Cucumber Selenium test
 A sample project using various automation libraries for api test execution using Cucumber and generating Extent Report.
 
