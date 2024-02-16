@@ -37,6 +37,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Run Testing..'
+                gradle cukes -Dcukes.env=devtest -Dcukes.testsuite=apitests --info
             }
         }
         stage('Report') {
