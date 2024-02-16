@@ -1,5 +1,5 @@
 
-## Sample Cucumber Selenium
+## Sample Cucumber Selenium test
 A sample project using various automation libraries for api test execution using Cucumber and generating Extent Report.
 
     library-common
