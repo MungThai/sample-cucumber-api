@@ -1,0 +1,25 @@
+{
+	"GET /v2/pet/{petID}" : {
+		"id": {
+			"element": "id",
+			"matcher": "equals",
+			"type": "int"
+		},
+		"name": {
+			"element": "name",
+			"matcher": "equals",
+			"type": "str"
+		}
+	},
+	"GET /v3/pet/{petID}" : {
+		"id": {
+			"element": "id",
+			"matcher": "equals",
+			"type": "str"
+		},"name": {
+			"element": "petName",
+			"matcher": "equals",
+			"type": "str"
+		}
+	}
+}

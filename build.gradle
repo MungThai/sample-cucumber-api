@@ -1,0 +1,55 @@
+apply plugin: 'java-library'
+
+configurations.all {
+    //resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    resolutionStrategy.eachDependency { details ->
+        if (details.requested.group == 'org.apache.logging.log4j') {
+            details.useVersion '2.17.0'
+            details.because 'zero-day-exploits suck'
+        }
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile group: 'com.accenture.atom', name: 'library-reporting-extent', version: '0.0.1', changing: true
+    compile group: 'com.accenture.atom', name: 'library-cucumber', version: '0.0.1', changing: true
+    compile group: 'com.accenture.atom', name: 'library-common', version: '0.0.1', changing: true
+}
+
+task cukes(type: Test) {
+    def suite = "$suiteDIR" + System.getProperty("cukes.testsuite") + '.xml'
+    systemProperty "org.apache.logging.log4j.level", "DEBUG"
+    systemProperty "cukes.env", System.getProperty("cukes.env")
+    ignoreFailures = false
+    System.out.println("Enterting TESTNG")
+    useTestNG() {
+        System.out.println("inside TESTNG 1")
+        useDefaultListeners = true
+        System.out.println(suite)
+        suites suite
+    }
+    outputs.upToDateWhen { false }
+}
+
+//use this task when passing tag from pipeline and tech stack
+task cucumberTag(type: Test) {
+    def suite = "$suiteDIR" + "pipeline/pipelineTestSuite.xml"
+    systemProperty "org.apache.logging.log4j.level", "DEBUG"
+    systemProperty "cukes.env", System.getProperty("cukes.env")
+    System.out.println("Enterting TESTNG")
+    ignoreFailures = false
+    useTestNG() {
+        System.out.println("inside  TESTNG")
+        useDefaultListeners = true
+        System.out.println(suite)
+        suites suite
+    }
+    System.out.println("Finished TESTNG")
+    outputs.upToDateWhen { false }
+}

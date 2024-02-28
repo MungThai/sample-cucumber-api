@@ -1,0 +1,15 @@
+{
+	"default": {
+		"id": 0,
+		"category": {
+			"id": 0,
+			"name": "string"
+		},
+		"name": "my new pet",
+		"status": "available",
+		"someArray":[
+			{"f1":"aaa",
+			"f2":"bbb"}
+		]
+	}
+}
