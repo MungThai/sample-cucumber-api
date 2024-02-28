@@ -13,7 +13,7 @@ If there is any requirement then custom step class can be added.
 ### Set up
 
 - Clone the repo  (https://github.com/Accenture/atom.git)
-- Import/Open `sample-cucumber-api` project in IDE (gradle refresh to pull the respective dependencies) 
+- Import/Open `cucumber-api-demo` project in IDE (gradle refresh to pull the respective dependencies) 
 
 
 ### Test Execution
