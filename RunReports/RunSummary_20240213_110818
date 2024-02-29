@@ -1,0 +1,25 @@
+Run Result Summary
+------------------------------------------------------
+| Status     | Passed  | Failed  | Skipped | Other   |
+------------------------------------------------------
+| Features   | 2       | 1       | 0       | 0       |
+| Scenarios  | 1       | 1       | 0       | 0       |
+------------------------------------------------------
+
+Run Result Listing
+--------------------------------------------------------------------------
+| Feature -> Scenario                          | Status | Duration       |
+--------------------------------------------------------------------------
+| Google Books Rest API                        | fail   | 0h 0m 1s 284ms |
+|   -> google books get data                   | fail   | 0h 0m 1s 284ms |
+| Pet Store Rest API                           | pass   | 0h 0m 2s 945ms |
+|   + Scenario Outline: Delete Pet Information | n/a    | n/a            |
+|   + Scenario Outline: Create Pet Information | n/a    | n/a            |
+|   + Scenario Outline: Get Pet Information 1  | n/a    | n/a            |
+|   + Scenario Outline: Get Pet Information 2  | n/a    | n/a            |
+| Google Maps Rest API                         | pass   | 0h 0m 0s 280ms |
+|   -> github auth                             | pass   | 0h 0m 0s 280ms |
+--------------------------------------------------------------------------
+| Started: Tue Feb 13 11:08:18 EST 2024                    0h 0m 5s 48ms |
+--------------------------------------------------------------------------
+
