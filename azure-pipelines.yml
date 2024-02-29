@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: Gradle@2
+  - task: Gradle@3
   inputs:
     workingDirectory: ''
     gradleWrapperFile: 'gradlew'
@@ -19,5 +19,4 @@ steps:
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
-    testResultsFiles: '**/apitest.xml'
-    tasks: 'build'
+    tasks: 'clean build'
